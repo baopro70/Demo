@@ -1,45 +1,46 @@
 // Danh sách màn chơi Demo mới
+// Danh sách màn chơi mới (Phân cấp: Dễ -> Tư duy -> Khó)
 const levels = [
-    // MÀN 0: Tutorial (1 thùng, 1 đích - Hướng dẫn cơ bản)
+    // MÀN 0: Tutorial (Hướng dẫn - 1 thùng)
     [
         "######",
         "# @$.#",
         "######"
     ],
 
-    // MÀN 1: Nhập môn (2 thùng, phòng rộng)
+    // MÀN 1: Cấp 1 (Dễ - 2 thùng, không gian vừa phải để làm quen)
     [
-        "########",
-        "# @    #",
-        "# $  . #",
-        "# $  . #",
-        "#      #",
-        "########"
+        "#######",
+        "# @   #",
+        "# $ $ #",
+        "# . . #",
+        "#     #",
+        "#######"
     ],
 
-    // MÀN 2: Tập tư duy (2 thùng, tường ngăn nhẹ)
+    // MÀN 2: Cấp 2 (Tư duy xíu - 3 thùng, có vật cản yêu cầu chọn thứ tự đẩy)
     [
         "#########",
         "#   #   #",
         "# @ $ . #",
-        "#   # # #",
+        "# # $ # #",
         "#   $ . #",
+        "#   .   #",
         "#########"
     ],
 
-    // MÀN 3: Thử thách vừa (3 thùng, đường hẹp)
+    // MÀN 3: Cấp 3 (Khó - 4 thùng, đường hẹp & dễ sập bẫy góc chết)
     [
         "  ###### ",
-        "###    # ",
+        "###  @ # ",
+        "# $ #$ # ",
+        "# . .  # ",
+        "##$## ## ",
         "# . $  # ",
-        "# # @  # ",
-        "# . $  # ",
-        "# # $ ## ",
-        "# .   #  ",
-        "#######  "
+        "#   .  # ",
+        "######## "
     ]
 ];
-
 let currentLevelIndex = 0;
 let map = [];
 let playerPos = { r: 0, c: 0 };
